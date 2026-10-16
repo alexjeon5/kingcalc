@@ -14,8 +14,8 @@
 ## ✨ 주요 기능
 
 ### 1. 기본 계산기 & 테마 시스템
-* 사칙연산을 지원하는 깔끔한 Glassmorphism 디자인의 계산기
-* 시스템 환경(OS)을 감지하는 **다크 모드 / 라이트 모드** 지원 및 사용자 설정 로컬 저장(`localStorage`)
+* 사칙연산을 지원하는 계산기 — [HANGGOK](https://www.hanggok.com) 사이트와 같은 디자인 시스템(색상 토큰, 서체, 헤더)을 사용
+* 시스템 환경(OS)을 감지하는 **다크 모드 / 라이트 모드** 지원, 버튼 위치에서 원형으로 번지는 전환 효과, 사용자 설정 로컬 저장(`localStorage`)
 
 ### 2. 재미를 더한 결제 시뮬레이션
 * 1회 계산 완료 후, 다음 계산 시 결제 모달 팝업 등장
@@ -43,10 +43,16 @@
 별도의 빌드나 서버 구축 과정이 필요하지 않은 순수 Vanilla 웹 프로젝트입니다.
 
 1. 저장소를 클론(Clone)하거나 ZIP 파일로 다운로드합니다.
-2. 폴더 내의 `index.html` 파일을 더블 클릭하여 웹 브라우저에서 실행합니다.
+2. 폴더에서 정적 서버를 실행합니다: `python3 -m http.server 8000` (ES 모듈을 쓰기 때문에 `file://`로 직접 열면 테마 전환이 동작하지 않습니다)
+   브라우저에서 `http://localhost:8000` 에 접속합니다.
 3. 계산을 1회 수행한 뒤, 다시 계산 버튼(`=`)을 눌러 결제 시스템을 테스트해 봅니다.
 
 ---
 
 ## 👨‍💻 제작자
 * **HANGGOK** * GitHub: [@alexjeon5](https://github.com/alexjeon5)
+
+---
+
+## 🙏 Credits
+* 테마 전환 효과: [Lucian UX/UI Prompt](https://lucianlabs.dev/uxui-prompt/) #219 — MIT License (c) 2026 Seokwoooo

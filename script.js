@@ -1,24 +1,4 @@
-// ==========================================
-// 1. 테마 관리 로직 (기존 상위 폴더 기능 포함)
-// ==========================================
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const prefersLightScheme = window.matchMedia('(prefers-color-scheme: light)').matches;
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'light' || (!savedTheme && prefersLightScheme)) {
-        body.classList.add('light-mode');
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            const isLight = body.classList.contains('light-mode');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        });
-    }
-});
+// 테마(라이트/다크) 전환은 theme.js 모듈이 담당합니다.
 
 // ==========================================
 // 2. 계산기 기본 상태 및 함수
